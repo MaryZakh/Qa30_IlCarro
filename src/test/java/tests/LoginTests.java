@@ -51,6 +51,49 @@ public class LoginTests extends TestBase {
         //app.getHelperUser().clickOkButton();
     }
 
+    @Test
+    public void loginWrongEmail() {
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("margogmail.com", "Mmar123456$");
+        app.getHelperUser().submit();
+        Assert.assertEquals(app.getHelperUser().getErrorText(), "It'snot look like email");
+        Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
+    }
+
+    @Test
+    public void loginEmptyEmail() {
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("", "Mmar123456$");
+        app.getHelperUser().submit();
+        Assert.assertEquals(app.getHelperUser().getErrorText(), "Email is required");
+        Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
+    }
+
+    @Test
+    public void loginWrongPassword() {
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("margo@gmail.com", "Mmar123");
+        app.getHelperUser().submit();
+        Assert.assertEquals(app.getHelperUser().getMessage(), "\"Login or Password incorrect\"");
+    }
+
+    @Test
+    public void loginEmptyPassword() {
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("margo@gmail.com", "");
+        app.getHelperUser().submit();
+        Assert.assertEquals(app.getHelperUser().getErrorText(), "Password is required");
+        Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
+    }
+
+    @Test
+    public void loginUnregistered() {
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("margo123@gmail.com", "Mmar123456$");
+        app.getHelperUser().submit();
+        Assert.assertEquals(app.getHelperUser().getMessage(), "\"Login or Password incorrect\"");
+    }
+
     @AfterMethod
     public void postCondition() {
         app.getHelperUser().clickOkButton();
