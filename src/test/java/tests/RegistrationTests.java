@@ -138,7 +138,7 @@ public class RegistrationTests extends TestBase {
         Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
     }
 
-    @Test(enabled = false)
+    @Test
     public void registrationPolicyButtonNotChecked() {
         int z = (int) ((System.currentTimeMillis() / 1000) % 3600);
 
@@ -159,6 +159,7 @@ public class RegistrationTests extends TestBase {
     @AfterMethod
     public void postCondition() {
         app.getHelperUser().clickOkButton();
+        app.getHelperUser().checkPolicy();
     }
 
 }
