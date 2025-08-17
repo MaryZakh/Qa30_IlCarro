@@ -94,4 +94,11 @@ public class HelperUser extends HelperBase {
     public String getErrorText() {
         return wd.findElement(By.cssSelector("div.error")).getText();
     }
+
+    public void login(User user) {
+        openLoginForm();
+        fillLoginForm(user);
+        submit();
+        clickOkButton();
+    }
 }
