@@ -31,6 +31,8 @@ if(!app.getHelperUser().isLogged()){
                 .price(50)
                 .about("Nice Car")
                 .build();
+        logger.info("Test start with test data --->" + car.toString());
+
 
         app.getHelperCar().openCarForm();
         app.getHelperCar().fillCarForm(car);

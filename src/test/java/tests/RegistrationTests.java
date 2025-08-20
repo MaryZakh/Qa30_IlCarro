@@ -30,6 +30,7 @@ public class RegistrationTests extends TestBase {
                 .withLastName("Snow")
                 .setEmail("snow" + z + "@gmail.com")
                 .setPassword("Ssnow123456$");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
@@ -46,6 +47,7 @@ public class RegistrationTests extends TestBase {
                 .withLastName("Snow")
                 .setEmail("snow@gmail.com")
                 .setPassword("Ssnow123456$");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
@@ -62,6 +64,7 @@ public class RegistrationTests extends TestBase {
                 .withLastName("")
                 .setEmail("snow@gmail.com")
                 .setPassword("Ssnow123456$");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
@@ -78,6 +81,7 @@ public class RegistrationTests extends TestBase {
                 .withLastName("Snow")
                 .setEmail("snowgmail.com")
                 .setPassword("Ssnow123456$");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
@@ -97,6 +101,7 @@ public class RegistrationTests extends TestBase {
                 .withLastName("Snow")
                 .setEmail("")
                 .setPassword("Ssnow123456$");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
@@ -113,6 +118,7 @@ public class RegistrationTests extends TestBase {
                 .withLastName("Snow")
                 .setEmail("snow@gmail.com")
                 .setPassword("Ssnow123");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
@@ -129,6 +135,7 @@ public class RegistrationTests extends TestBase {
                 .withLastName("Snow")
                 .setEmail("snow@gmail.com")
                 .setPassword("");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
@@ -147,6 +154,7 @@ public class RegistrationTests extends TestBase {
                 .withLastName("Snow")
                 .setEmail("snow" + z + "@gmail.com")
                 .setPassword("Ssnow123456$");
+        logger.info("Test start with test data --->" + user.toString());
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
